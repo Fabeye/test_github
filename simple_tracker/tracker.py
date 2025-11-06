@@ -7,7 +7,10 @@ class Tracker:
 
     def save_to_file(self):
         with open('C:\\Users\\Student\\Desktop\\test_github\\simple_tracker\\data.txt', 'w') as file:
-            file.write(self.count)
+            file.write(str(self))
     
     def __str__(self):
         return f"Current count: {self.count}"
+    
+    def reset(self):
+        self.counter = 0
